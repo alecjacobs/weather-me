@@ -8,13 +8,12 @@ requestHandler = (error, response, body) ->
   currentTemp = $('#curTemp .wx-value').text()
   currentUnit = $('#curTemp .wx-unit').text()
 
-  weatherOutput = "#{currentCondition} - #{currentTemp} #{currentUnit}"
+  printWeather(currentCondition, currentTemp, currentUnit)
 
+printWeather = (cond, temp, unit) ->
+  weatherOutput = "#{cond} - #{temp} #{unit}"
   console.log(weatherOutput)
 
-getWeather = (zipCode) ->
+module.exports.getWeather = (zipCode) ->
   url = "http://www.wunderground.com/cgi-bin/findweather/getForecast?query=" + zipCode
   request(url, requestHandler)
-
-zipCode = process.argv[2] || "10012"
-getWeather(zipCode)
