@@ -5,7 +5,7 @@ A coffee script app to get the weather. The location can be passed in as an argu
 
 usage:
 ---  
-for example...  `coffee weather-me.coffee 75230`  
+for example...  `coffee get-weather.coffee 75230`  
 
 possible results: 
 
