@@ -1,6 +1,4 @@
-underscore = require 'underscore'
 request = require 'request'
-cheerio = require 'cheerio'
 fs = require 'fs'
 
 # better way to get this? __dirname is undefined?
