@@ -1,6 +1,6 @@
+weather = require './get-weather'
+
 DEFAULT_LOCATION = "10012"
-argumentLocation = process.argv[2]
+inputLocation = process.argv[2]
 
-weather = require './get-weather.coffee'
-
-weather.getWeather(argumentLocation || DEFAULT_LOCATION)
+weather.getWeather(inputLocation || DEFAULT_LOCATION)
